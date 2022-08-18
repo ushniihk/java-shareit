@@ -2,7 +2,9 @@ package ru.practicum.shareit.item.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.practicum.shareit.exceptions.exceptions.*;
+import ru.practicum.shareit.exceptions.CreatingException;
+import ru.practicum.shareit.exceptions.NotFoundParameterException;
+import ru.practicum.shareit.exceptions.UpdateException;
 import ru.practicum.shareit.item.DB.ItemDB;
 import ru.practicum.shareit.item.dto.ItemDto;
 import ru.practicum.shareit.user.DB.UserDB;

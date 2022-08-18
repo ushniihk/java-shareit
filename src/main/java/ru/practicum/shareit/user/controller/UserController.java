@@ -2,8 +2,8 @@ package ru.practicum.shareit.user.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.shareit.exceptions.exceptions.CreatingException;
-import ru.practicum.shareit.exceptions.exceptions.NotFoundParameterException;
+import ru.practicum.shareit.exceptions.CreatingException;
+import ru.practicum.shareit.exceptions.NotFoundParameterException;
 import ru.practicum.shareit.user.dto.UserDto;
 import ru.practicum.shareit.user.service.UserService;
 

@@ -1,6 +1,6 @@
 package ru.practicum.shareit.user.DB;
 
-import ru.practicum.shareit.exceptions.exceptions.NotFoundParameterException;
+import ru.practicum.shareit.exceptions.NotFoundParameterException;
 import ru.practicum.shareit.user.dto.UserDto;
 
 import java.util.List;
