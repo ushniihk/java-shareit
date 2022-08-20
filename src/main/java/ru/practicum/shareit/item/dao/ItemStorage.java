@@ -1,17 +1,18 @@
-package ru.practicum.shareit.item.DB;
+package ru.practicum.shareit.item.dao;
 
 import ru.practicum.shareit.item.dto.ItemDto;
 
 import java.util.List;
 
-public interface ItemDB {
-    ItemDto addNew(ItemDto itemDto);
+public interface ItemStorage {
+    ItemDto addNew(long userId, ItemDto itemDto);
 
     List<ItemDto> getAllByUser(long userId);
 
     List<ItemDto> getAll();
 
-    ItemDto get(long itemId);
+
+    ItemDto get(long userId, long itemId);
 
     void delete(long userId, long itemId);
 

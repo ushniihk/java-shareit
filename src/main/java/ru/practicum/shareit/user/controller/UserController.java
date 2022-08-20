@@ -2,8 +2,6 @@ package ru.practicum.shareit.user.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import ru.practicum.shareit.exceptions.CreatingException;
-import ru.practicum.shareit.exceptions.NotFoundParameterException;
 import ru.practicum.shareit.user.dto.UserDto;
 import ru.practicum.shareit.user.service.UserService;
 
@@ -22,12 +20,12 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    public UserDto get(@PathVariable long userId) throws NotFoundParameterException {
+    public UserDto get(@PathVariable long userId) {
         return userService.get(userId);
     }
 
     @PostMapping
-    public UserDto add(@RequestBody UserDto userDto) throws CreatingException {
+    public UserDto add(@RequestBody UserDto userDto) {
         return userService.add(userDto);
     }
 
@@ -37,8 +35,7 @@ public class UserController {
     }
 
     @PatchMapping("/{userId}")
-    public UserDto update(@PathVariable long userId, @RequestBody UserDto userDto)
-            throws CreatingException, NotFoundParameterException {
+    public UserDto update(@PathVariable long userId, @RequestBody UserDto userDto) {
         return userService.update(userId, userDto);
     }
 

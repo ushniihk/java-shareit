@@ -1,6 +1,6 @@
 package ru.practicum.shareit.exceptions;
 
-public class CreatingException extends Exception {
+public class CreatingException extends RuntimeException {
     public CreatingException(String message) {
         super(message);
     }

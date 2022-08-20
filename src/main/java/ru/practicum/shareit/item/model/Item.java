@@ -2,8 +2,7 @@ package ru.practicum.shareit.item.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import ru.practicum.shareit.item.dto.ItemDto;
-import ru.practicum.shareit.requests.model.ItemRequest;
+import lombok.EqualsAndHashCode;
 import ru.practicum.shareit.user.model.User;
 
 @Data
@@ -13,23 +12,15 @@ public class Item {
     private String name;
     private String description;
     private Boolean available;
+    @EqualsAndHashCode.Exclude
     private User owner;
-    private ItemRequest request;
+    private Long request;
 
-    public Item(String name, String description, boolean available) {
+    public Item(long id, String name, String description, Boolean available, Long request) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.available = available;
-    }
-
-    public static ItemDto toItemDto(Item item) {
-        return new ItemDto(
-                item.getId(),
-                item.getName(),
-                item.getDescription(),
-                item.getAvailable(),
-                item.getOwner(),
-                item.getRequest() != null ? item.getRequest() : null
-        );
+        this.request = request;
     }
 }
