@@ -1,12 +1,44 @@
 package ru.practicum.shareit.booking.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+import ru.practicum.shareit.booking.dto.BookingDto;
+import ru.practicum.shareit.booking.dto.BookingDtoWithItemAndUser;
+import ru.practicum.shareit.booking.service.BookingService;
 
-/**
- * // TODO .
- */
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/bookings")
+@RequiredArgsConstructor
 public class BookingController {
+    private final BookingService bookingService;
+
+    @PostMapping
+    public BookingDtoWithItemAndUser add(@RequestHeader("X-Sharer-User-Id") Long userId, @RequestBody BookingDto bookingDto) {
+        return bookingService.add(userId, bookingDto);
+    }
+
+    @PatchMapping("/{bookingId}")
+    public BookingDtoWithItemAndUser approve(@RequestHeader("X-Sharer-User-Id") Long userId, @PathVariable Long bookingId,
+                                             @RequestParam boolean approved) {
+        return bookingService.approve(userId, bookingId, approved);
+    }
+
+    @GetMapping("/{bookingId}")
+    public BookingDtoWithItemAndUser get(@RequestHeader("X-Sharer-User-Id") Long userId, @PathVariable Long bookingId) {
+        return bookingService.get(userId, bookingId);
+    }
+
+    @GetMapping
+    public List<BookingDtoWithItemAndUser> findAll(@RequestHeader("X-Sharer-User-Id") Long userId,
+                                                   @RequestParam(required = false, defaultValue = "ALL") String state) {
+        return bookingService.findAll(userId, state);
+    }
+
+    @GetMapping("/owner")
+    public List<BookingDtoWithItemAndUser> findAllByItemOwner(@RequestHeader("X-Sharer-User-Id") Long userId,
+                                                              @RequestParam(required = false, defaultValue = "ALL") String state) {
+        return bookingService.findAllByItemOwner(userId, state);
+    }
 }
