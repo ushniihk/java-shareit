@@ -67,7 +67,6 @@
             <type>maven-plugin</type>
         </dependency>
 
-
         <!-- https://mvnrepository.com/artifact/com.github.spotbugs/spotbugs-maven-plugin -->
         <dependency>
             <groupId>com.github.spotbugs</groupId>
