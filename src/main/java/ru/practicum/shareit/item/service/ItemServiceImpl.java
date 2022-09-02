@@ -141,9 +141,9 @@ public class ItemServiceImpl implements ItemService {
         List<Comment> comments = commentStorage.findAllByItem(item.getId());
         List<CommentDtoWithAuthorAndItem> commentDtoWithAuthorAndItemList = new ArrayList<>();
         for (Comment c : comments) {
-            CommentDtoWithAuthorAndItem cdai = CommentMapper.toCommentDtoWithAuthorAndItem(c);
-            cdai.setAuthorName(userStorage.getReferenceById(c.getAuthor()).getName());
-            commentDtoWithAuthorAndItemList.add(cdai);
+            CommentDtoWithAuthorAndItem commentDtoWithAuthorAndItem = CommentMapper.toCommentDtoWithAuthorAndItem(c);
+            commentDtoWithAuthorAndItem.setAuthorName(userStorage.getReferenceById(c.getAuthor()).getName());
+            commentDtoWithAuthorAndItemList.add(commentDtoWithAuthorAndItem);
         }
         item.setComments(commentDtoWithAuthorAndItemList);
         return item;
