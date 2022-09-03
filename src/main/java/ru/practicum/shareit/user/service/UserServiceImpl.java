@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.practicum.shareit.exceptions.CreatingException;
 import ru.practicum.shareit.exceptions.NotFoundParameterException;
-import ru.practicum.shareit.user.dao.UserStorage;
+import ru.practicum.shareit.user.dao.UserRepository;
 import ru.practicum.shareit.user.dto.UserDto;
 import ru.practicum.shareit.user.mapper.UserMapper;
 
@@ -15,31 +15,32 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private final UserStorage userStorage;
+    private final UserRepository userRepository;
+    private final UserMapper userMapper;
 
     @Override
     public List<UserDto> getAll() {
-        return userStorage.findAll().stream().map(UserMapper::toUserDto).collect(Collectors.toList());
+        return userRepository.findAll().stream().map(userMapper::toUserDto).collect(Collectors.toList());
     }
 
     @Override
     public UserDto get(long userId) {
-        if (!userStorage.existsById(userId)) {
+        if (!userRepository.existsById(userId)) {
             throw new NotFoundParameterException("bad id");
         }
-        return UserMapper.toUserDto(userStorage.getReferenceById(userId));
+        return userMapper.toUserDto(userRepository.getReferenceById(userId));
     }
 
     @Override
     public UserDto add(UserDto userDto) {
         checkEmail(userDto);
-        userStorage.save(UserMapper.toUser(userDto));
-        return UserMapper.toUserDto(userStorage.getUserByEmail(userDto.getEmail()));
+        userRepository.save(userMapper.toUser(userDto));
+        return userMapper.toUserDto(userRepository.getUserByEmail(userDto.getEmail()));
     }
 
     @Override
     public void delete(long userId) {
-        userStorage.deleteAllById(List.of(userId));
+        userRepository.deleteAllById(List.of(userId));
     }
 
     @Override
@@ -52,7 +53,7 @@ public class UserServiceImpl implements UserService {
         }
         if (userDto.getName() != null)
             oldUserDto.setName(userDto.getName());
-        userStorage.save(UserMapper.toUser(oldUserDto));
+        userRepository.save(userMapper.toUser(oldUserDto));
         return oldUserDto;
     }
 

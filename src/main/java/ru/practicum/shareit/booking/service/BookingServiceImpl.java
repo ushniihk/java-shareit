@@ -2,7 +2,7 @@ package ru.practicum.shareit.booking.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.practicum.shareit.booking.dao.BookingStorage;
+import ru.practicum.shareit.booking.dao.BookingRepository;
 import ru.practicum.shareit.booking.dto.BookingDto;
 import ru.practicum.shareit.booking.dto.BookingDtoWithItemAndUser;
 import ru.practicum.shareit.booking.mapper.BookingMapper;
@@ -10,11 +10,11 @@ import ru.practicum.shareit.booking.model.Booking;
 import ru.practicum.shareit.exceptions.CreatingException;
 import ru.practicum.shareit.exceptions.IncorrectParameterException;
 import ru.practicum.shareit.exceptions.NotFoundParameterException;
-import ru.practicum.shareit.item.dao.ItemStorage;
+import ru.practicum.shareit.item.dao.ItemRepository;
 import ru.practicum.shareit.item.dto.ItemDto;
 import ru.practicum.shareit.item.mapper.ItemMapper;
 import ru.practicum.shareit.item.model.Item;
-import ru.practicum.shareit.user.dao.UserStorage;
+import ru.practicum.shareit.user.dao.UserRepository;
 import ru.practicum.shareit.user.dto.UserDto;
 import ru.practicum.shareit.user.mapper.UserMapper;
 
@@ -26,48 +26,51 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class BookingServiceImpl implements BookingService {
-    private final BookingStorage bookingStorage;
-    private final ItemStorage itemStorage;
-    private final UserStorage userStorage;
+    private final BookingRepository bookingRepository;
+    private final ItemRepository itemRepository;
+    private final UserRepository userRepository;
+    private final BookingMapper bookingMapper;
+    private final UserMapper userMapper;
+    private final ItemMapper itemMapper;
 
     @Override
     public BookingDtoWithItemAndUser add(long userId, BookingDto bookingDto) {
         checkUser(userId);
         checkBooking(bookingDto);
         checkItem(bookingDto.getItemId());
-        Item item = itemStorage.getReferenceById(bookingDto.getItemId());
+        Item item = itemRepository.getReferenceById(bookingDto.getItemId());
         if (userId == item.getOwner())
             throw new NotFoundParameterException("user can't make a request for his item");
         bookingDto.setStatus(Booking.Status.WAITING);
         bookingDto.setBookerId(userId);
-        bookingStorage.save(BookingMapper.toBooking(bookingDto));
+        bookingRepository.save(bookingMapper.toBooking(bookingDto));
         return getBookingDtoWithItemAndUser(bookingDto);
     }
 
     @Override
     public BookingDtoWithItemAndUser approve(long userId, long bookingId, boolean approved) {
-        Booking booking = bookingStorage.getReferenceById(bookingId);
+        Booking booking = bookingRepository.getReferenceById(bookingId);
         if (booking.getStatus().equals(Booking.Status.APPROVED))
             throw new IncorrectParameterException("status has already been approved");
-        Item item = itemStorage.getReferenceById(booking.getItemId());
+        Item item = itemRepository.getReferenceById(booking.getItemId());
         if (!item.getOwner().equals(userId))
             throw new NotFoundParameterException("user is not the owner");
         if (approved) {
             booking.setStatus(Booking.Status.APPROVED);
         } else booking.setStatus(Booking.Status.REJECTED);
-        bookingStorage.save(booking);
-        BookingDto bookingDto = BookingMapper.toBookingDto(booking);
+        bookingRepository.save(booking);
+        BookingDto bookingDto = bookingMapper.toBookingDto(booking);
         return getBookingDtoWithItemAndUser(bookingDto);
     }
 
     @Override
     public BookingDtoWithItemAndUser get(long userId, long bookingId) {
         checkUser(userId);
-        if (!bookingStorage.existsById(bookingId)) {
+        if (!bookingRepository.existsById(bookingId)) {
             throw new NotFoundParameterException("bad booking id");
         }
-        BookingDto bookingDto = BookingMapper.toBookingDto(bookingStorage.getReferenceById(bookingId));
-        Item item = itemStorage.getReferenceById(bookingDto.getItemId());
+        BookingDto bookingDto = bookingMapper.toBookingDto(bookingRepository.getReferenceById(bookingId));
+        Item item = itemRepository.getReferenceById(bookingDto.getItemId());
         if (bookingDto.getBookerId() != userId && item.getOwner() != userId)
             throw new NotFoundParameterException("bad user id");
         checkBooking(bookingDto);
@@ -79,20 +82,19 @@ public class BookingServiceImpl implements BookingService {
     public List<BookingDtoWithItemAndUser> findAll(long userId, String state) {
         checkUser(userId);
         if (state.equals("ALL")) {
-            return listOfBookingDtoWithItemAndUsers(bookingStorage.findAllByBookerIdOrderByStartDesc(userId));
+            return listOfBookingDtoWithItemAndUsers(bookingRepository.findAllByBookerIdOrderByStartDesc(userId));
         }
-
         return listOfBookingDtoWithItemAndUsers(checkStatus(
-                new ArrayList<>(bookingStorage.findAllByBookerIdOrderByStartDesc(userId)), state));
+                new ArrayList<>(bookingRepository.findAllByBookerIdOrderByStartDesc(userId)), state));
     }
 
     @Override
     public List<BookingDtoWithItemAndUser> findAllByItemOwner(Long userId, String state) {
         checkUser(userId);
-        List<Item> items = itemStorage.findAllByOwnerOrderById(userId);
+        List<Item> items = itemRepository.findAllByOwnerOrderById(userId);
         List<Booking> bookings = new ArrayList<>();
         for (Item i : items) {
-            bookings.addAll(bookingStorage.findAllByItemIdOrderByStartDesc(i.getId()));
+            bookings.addAll(bookingRepository.findAllByItemIdOrderByStartDesc(i.getId()));
         }
         if (state.equals("ALL")) {
             return listOfBookingDtoWithItemAndUsers(bookings);
@@ -101,9 +103,9 @@ public class BookingServiceImpl implements BookingService {
     }
 
     private void checkItem(Long itemId) {
-        if (!itemStorage.existsById(itemId))
+        if (!itemRepository.existsById(itemId))
             throw new NotFoundParameterException("bad itemId");
-        Item item = itemStorage.getReferenceById(itemId);
+        Item item = itemRepository.getReferenceById(itemId);
         if (item.getAvailable().equals(false)) {
             throw new CreatingException("Item is unavailable");
         }
@@ -115,16 +117,16 @@ public class BookingServiceImpl implements BookingService {
     }
 
     private void checkUser(Long userId) {
-        if (!userStorage.existsById(userId))
+        if (!userRepository.existsById(userId))
             throw new NotFoundParameterException("bad user id");
     }
 
     private BookingDtoWithItemAndUser getBookingDtoWithItemAndUser(BookingDto bookingDto) {
-        BookingDtoWithItemAndUser bookingDtoWithItemAndUser = BookingMapper.bookingDtoWithItemAndUser(BookingMapper.toBookingDto(
-                bookingStorage.findBookingByStartAndEndAndBookerIdAndItemId(bookingDto.getStart(), bookingDto.getEnd(),
-                        bookingDto.getBookerId(), bookingDto.getItemId())));
-        UserDto bookerDto = UserMapper.toUserDto(userStorage.getReferenceById(bookingDto.getBookerId()));
-        ItemDto itemDto = ItemMapper.toItemDto(itemStorage.getReferenceById(bookingDto.getItemId()));
+        BookingDtoWithItemAndUser bookingDtoWithItemAndUser = bookingMapper.toBookingDtoWithItemAndUser(
+                bookingMapper.toBookingDto(bookingRepository.findBookingByStartAndEndAndBookerIdAndItemId(
+                        bookingDto.getStart(), bookingDto.getEnd(), bookingDto.getBookerId(), bookingDto.getItemId())));
+        UserDto bookerDto = userMapper.toUserDto(userRepository.getReferenceById(bookingDto.getBookerId()));
+        ItemDto itemDto = itemMapper.toItemDto(itemRepository.getReferenceById(bookingDto.getItemId()));
         bookingDtoWithItemAndUser.setBooker(bookerDto);
         bookingDtoWithItemAndUser.setItem(itemDto);
         return bookingDtoWithItemAndUser;
@@ -163,7 +165,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     private List<BookingDtoWithItemAndUser> listOfBookingDtoWithItemAndUsers(List<Booking> bookings) {
-        return bookings.stream().map(BookingMapper::toBookingDto)
+        return bookings.stream().map(bookingMapper::toBookingDto)
                 .map(this::getBookingDtoWithItemAndUser).collect(Collectors.toList());
     }
 }
