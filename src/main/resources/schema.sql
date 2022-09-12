@@ -38,6 +38,7 @@ create table if not exists requests(
     id           BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     description  varchar(320) not null ,
     requestor_id bigint not null ,
+    created      TIMESTAMP WITHOUT TIME ZONE not null,
     CONSTRAINT fk_requests_to_users FOREIGN KEY(requestor_id) REFERENCES users(id)
 );
 

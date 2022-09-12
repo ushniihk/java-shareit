@@ -17,8 +17,10 @@ public class ItemController {
     private final ItemService itemService;
 
     @GetMapping
-    public List<ItemDtoWithBooking> getAllByUser(@RequestHeader("X-Sharer-User-Id") long userId) {
-        return itemService.getAllByUser(userId);
+    public List<ItemDtoWithBooking> getAllByUser(@RequestHeader("X-Sharer-User-Id") long userId,
+                                                 @RequestParam(required = false, defaultValue = "0") int from,
+                                                 @RequestParam(required = false, defaultValue = "10") int size) {
+        return itemService.getAllByUser(userId, from, size);
     }
 
     @GetMapping("/{itemId}")
@@ -27,12 +29,14 @@ public class ItemController {
     }
 
     @GetMapping("/search")
-    public List<ItemDto> search(@RequestHeader("X-Sharer-User-Id") long userId, @RequestParam String text) {
-        return itemService.search(userId, text);
+    public List<ItemDto> search(@RequestHeader("X-Sharer-User-Id") long userId, @RequestParam String text,
+                                @RequestParam(required = false, defaultValue = "0") int from,
+                                @RequestParam(required = false, defaultValue = "10") int size) {
+        return itemService.search(userId, text, from, size);
     }
 
     @PostMapping
-    public ItemDto add(@RequestHeader("X-Sharer-User-Id") Long userId, @RequestBody ItemDto itemDto) {
+    public ItemDtoWithBooking add(@RequestHeader("X-Sharer-User-Id") Long userId, @RequestBody ItemDto itemDto) {
         return itemService.addNew(userId, itemDto);
     }
 

@@ -9,13 +9,13 @@ import java.util.List;
 
 public interface ItemService {
 
-    List<ItemDtoWithBooking> getAllByUser(long userId);
+    List<ItemDtoWithBooking> getAllByUser(long userId, int from, int size);
 
     ItemDtoWithBooking get(long userId, long itemId);
 
-    List<ItemDto> search(long userId, String text);
+    List<ItemDto> search(long userId, String text, int from, int size);
 
-    ItemDto addNew(long userId, ItemDto itemDto);
+    ItemDtoWithBooking addNew(long userId, ItemDto itemDto);
 
     void delete(long userId, long itemId);
 
