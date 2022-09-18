@@ -21,21 +21,20 @@ public class ItemRequestController {
     }
 
     @GetMapping("/all")
-    public List<ItemRequestDtoForResponse>getAllByOtherUsers(@RequestHeader("X-Sharer-User-Id") Long userId,
-                                                             @RequestParam(required = false, defaultValue = "0") int from,
-                                                             @RequestParam(required = false, defaultValue = "10") int size) {
+    public List<ItemRequestDtoForResponse> getAllByOtherUsers(@RequestHeader("X-Sharer-User-Id") Long userId,
+                                                              @RequestParam(required = false, defaultValue = "0") int from,
+                                                              @RequestParam(required = false, defaultValue = "10") int size) {
         return itemRequestService.getAllByOtherUsers(userId, from, size);
     }
 
     @GetMapping("/{requestId}")
-    public ItemRequestDtoForResponse get(@RequestHeader("X-Sharer-User-Id") Long userId, @PathVariable long requestId){
+    public ItemRequestDtoForResponse get(@RequestHeader("X-Sharer-User-Id") Long userId, @PathVariable long requestId) {
         return itemRequestService.get(userId, requestId);
     }
 
     @PostMapping
     public ItemRequestDtoForResponse add(@RequestHeader("X-Sharer-User-Id") Long userId,
-                              @RequestBody ItemRequestDto itemRequestDto){
+                                         @RequestBody ItemRequestDto itemRequestDto) {
         return itemRequestService.add(userId, itemRequestDto);
     }
-
 }
