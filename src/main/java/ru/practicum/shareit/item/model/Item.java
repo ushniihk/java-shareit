@@ -25,8 +25,8 @@ public class Item {
     private Boolean available;
     @EqualsAndHashCode.Exclude
     @Column(name = "owner_id", nullable = false)
-    private Long owner;
+    private long owner;
     @Column(name = "request_id", nullable = false)
-    private Long request;
+    private long request;
 
 }

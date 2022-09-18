@@ -36,9 +36,6 @@ public class ItemServiceImpl implements ItemService {
     private final UserRepository userRepository;
     private final BookingRepository bookingRepository;
     private final CommentRepository commentRepository;
-    private final BookingMapper bookingMapper;
-    private final ItemMapper itemMapper;
-    private final CommentMapper commentMapper;
 
     @Override
     public List<ItemDtoWithBooking> getAllByUser(long userId, int from, int size) {
@@ -67,7 +64,7 @@ public class ItemServiceImpl implements ItemService {
         return itemRepository.findAll(from, pageRequest).stream()
                 .filter(item -> item.getDescription().toLowerCase().contains(text.toLowerCase()))
                 .filter(item -> item.getAvailable().equals(true))
-                .map(itemMapper::toItemDto)
+                .map(ItemMapper::toItemDto)
                 .collect(Collectors.toList());
     }
 
@@ -78,7 +75,7 @@ public class ItemServiceImpl implements ItemService {
             throw new NotFoundParameterException("bad user id");
         }
         itemDto.setOwner(userId);
-        return itemMapper.toItemDtoWithBooking(itemRepository.save(itemMapper.toItem(itemDto)));
+        return ItemMapper.toItemDtoWithBooking(itemRepository.save(ItemMapper.toItem(itemDto)));
 
     }
 
@@ -92,7 +89,7 @@ public class ItemServiceImpl implements ItemService {
         if (get(userId, itemId).getOwner() != userId) {
             throw new UpdateException("bad user id");
         }
-        ItemDto oldItemDto = itemMapper.toItemDto(itemRepository.getReferenceById(itemId));
+        ItemDto oldItemDto = ItemMapper.toItemDto(itemRepository.getReferenceById(itemId));
         if (itemDto.getName() != null) {
             oldItemDto.setName(itemDto.getName());
         }
@@ -102,7 +99,7 @@ public class ItemServiceImpl implements ItemService {
         if (itemDto.getAvailable() != null) {
             oldItemDto.setAvailable(itemDto.getAvailable());
         }
-        itemRepository.save(itemMapper.toItem(oldItemDto));
+        itemRepository.save(ItemMapper.toItem(oldItemDto));
         return oldItemDto;
     }
 
@@ -120,8 +117,8 @@ public class ItemServiceImpl implements ItemService {
         commentDto.setAuthorId(userId);
         commentDto.setItemId(itemId);
         commentDto.setCreated(LocalDate.now());
-        CommentDtoWithAuthorAndItem comment = commentMapper
-                .toCommentDtoWithAuthorAndItem(commentRepository.save(commentMapper.toComment(commentDto)));
+        CommentDtoWithAuthorAndItem comment = CommentMapper
+                .toCommentDtoWithAuthorAndItem(commentRepository.save(CommentMapper.toComment(commentDto)));
         comment.setAuthorName(userRepository.getReferenceById(commentDto.getAuthorId()).getName());
         return comment;
     }
@@ -132,7 +129,7 @@ public class ItemServiceImpl implements ItemService {
     }
 
     private ItemDtoWithBooking setBookingsForItem(Item item, long userId) {
-        ItemDtoWithBooking itemDtoWithBooking = itemMapper.toItemDtoWithBooking(item);
+        ItemDtoWithBooking itemDtoWithBooking = ItemMapper.toItemDtoWithBooking(item);
         List<Booking> lastBookings = bookingRepository
                 .findAllByItemIdAndStartIsBeforeOrderByStartDesc(item.getId(), LocalDateTime.now())
                 .stream().filter(booking -> booking.getBookerId() != userId).collect(Collectors.toList());
@@ -140,9 +137,9 @@ public class ItemServiceImpl implements ItemService {
                 .findAllByItemIdAndStartIsAfterOrderByStartAsc(item.getId(), LocalDateTime.now())
                 .stream().filter(booking -> booking.getBookerId() != userId).collect(Collectors.toList());
         if (lastBookings.size() > 0)
-            itemDtoWithBooking.setLastBooking(bookingMapper.toBookingDto(lastBookings.get(0)));
+            itemDtoWithBooking.setLastBooking(BookingMapper.toBookingDto(lastBookings.get(0)));
         if (nextBookings.size() > 0)
-            itemDtoWithBooking.setNextBooking(bookingMapper.toBookingDto(nextBookings.get(0)));
+            itemDtoWithBooking.setNextBooking(BookingMapper.toBookingDto(nextBookings.get(0)));
         return itemDtoWithBooking;
     }
 
@@ -150,7 +147,7 @@ public class ItemServiceImpl implements ItemService {
         List<Comment> comments = commentRepository.findAllByItem(item.getId());
         List<CommentDtoWithAuthorAndItem> commentDtoWithAuthorAndItemList = new ArrayList<>();
         for (Comment c : comments) {
-            CommentDtoWithAuthorAndItem commentDtoWithAuthorAndItem = commentMapper.toCommentDtoWithAuthorAndItem(c);
+            CommentDtoWithAuthorAndItem commentDtoWithAuthorAndItem = CommentMapper.toCommentDtoWithAuthorAndItem(c);
             commentDtoWithAuthorAndItem.setAuthorName(userRepository.getReferenceById(c.getAuthor()).getName());
             commentDtoWithAuthorAndItemList.add(commentDtoWithAuthorAndItem);
         }

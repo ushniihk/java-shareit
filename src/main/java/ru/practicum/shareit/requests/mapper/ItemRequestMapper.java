@@ -10,12 +10,11 @@ import ru.practicum.shareit.requests.model.dto.ItemRequestDtoForResponse;
 
 import java.util.stream.Collectors;
 
-@Component
 @RequiredArgsConstructor
+@Component
 public class ItemRequestMapper {
 
     private final ItemRepository itemRepository;
-    private final ItemMapper itemMapper;
 
     public ItemRequestDtoForResponse toItemRequestDtoForResponse(ItemRequest itemRequest) {
         return new ItemRequestDtoForResponse(
@@ -24,7 +23,7 @@ public class ItemRequestMapper {
                 itemRequest.getRequestor(),
                 itemRequest.getCreated(),
                 itemRepository.findAllByRequest(itemRequest.getId()).stream()
-                        .map(itemMapper::toItemDtoWithBooking).collect(Collectors.toList())
+                        .map(ItemMapper::toItemDtoWithBooking).collect(Collectors.toList())
         );
     }
 
