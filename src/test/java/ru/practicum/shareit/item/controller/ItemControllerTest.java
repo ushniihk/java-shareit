@@ -167,7 +167,7 @@ class ItemControllerTest {
     }
 
     @Test
-    void shouldAddComment() throws Exception{
+    void shouldAddComment() throws Exception {
         CommentDto commentDto = new CommentDto(1, "text", 2, 3, null);
         CommentDtoWithAuthorAndItem commentDtoForResponse =
                 new CommentDtoWithAuthorAndItem(1, "text", 2, "Sam", null);
