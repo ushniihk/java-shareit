@@ -20,7 +20,7 @@ public class ItemController {
     public List<ItemDtoWithBooking> getAllByUser(@RequestHeader("X-Sharer-User-Id") long userId,
                                                  @RequestParam(required = false, defaultValue = "0") int from,
                                                  @RequestParam(required = false, defaultValue = "10") int size) {
-        return itemService.getAllByUser(userId, from, size);
+        return itemService.getAllByUser(userId, from, size).toList();
     }
 
     @GetMapping("/{itemId}")

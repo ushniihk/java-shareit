@@ -1,5 +1,6 @@
 package ru.practicum.shareit.item.service;
 
+import org.springframework.data.domain.Page;
 import ru.practicum.shareit.item.dto.CommentDto;
 import ru.practicum.shareit.item.dto.CommentDtoWithAuthorAndItem;
 import ru.practicum.shareit.item.dto.ItemDto;
@@ -9,7 +10,7 @@ import java.util.List;
 
 public interface ItemService {
 
-    List<ItemDtoWithBooking> getAllByUser(long userId, int from, int size);
+    Page<ItemDtoWithBooking> getAllByUser(long userId, int from, int size);
 
     ItemDtoWithBooking get(long userId, long itemId);
 
