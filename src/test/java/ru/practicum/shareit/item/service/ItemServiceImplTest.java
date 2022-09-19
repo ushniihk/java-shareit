@@ -99,7 +99,7 @@ class ItemServiceImplTest {
         doReturn(comments).when(commentRepository).findAllByItem(anyLong());
         doReturn(UserMapper.toUser(booker)).when(userRepository).getReferenceById(any());
 
-        List<ItemDtoWithBooking> list = service.getAllByUser(booker.getId(), 0, 10).toList();
+        List<ItemDtoWithBooking> list = service.getAllByUser(booker.getId(), 0, 10);
 
         MatcherAssert.assertThat(list.get(0).getId(), equalTo(item.getId()));
         MatcherAssert.assertThat(list.get(0).getName(), equalTo(item.getName()));
