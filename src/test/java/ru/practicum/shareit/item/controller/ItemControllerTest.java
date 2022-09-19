@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -73,7 +72,7 @@ class ItemControllerTest {
         List<ItemDtoWithBooking> list = new ArrayList<>();
         list.add(itemDtoWithBooking);
         when(service.getAllByUser(any(long.class), any(int.class), any(int.class)))
-                .thenReturn(new PageImpl<>(list));
+                .thenReturn(list);
         mvc.perform(MockMvcRequestBuilders.get("/items")
                         .header("X-Sharer-User-Id", 1))
                 .andExpect(status().isOk())

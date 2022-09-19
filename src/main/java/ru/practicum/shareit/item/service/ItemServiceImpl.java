@@ -1,8 +1,6 @@
 package ru.practicum.shareit.item.service;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import ru.practicum.shareit.booking.dao.BookingRepository;
@@ -40,14 +38,13 @@ public class ItemServiceImpl implements ItemService {
     private final CommentRepository commentRepository;
 
     @Override
-    public Page<ItemDtoWithBooking> getAllByUser(long userId, int from, int size) {
+    public List<ItemDtoWithBooking> getAllByUser(long userId, int from, int size) {
         if (from < 0 || size <= 0)
             throw new IncorrectParameterException("bad size or index");
         PageRequest pageRequest = PageRequest.of(0, size);
-        Page<ItemDtoWithBooking> page = new PageImpl<>(itemRepository.findAllByOwnerOrderById(userId, from, pageRequest).stream()
+        return itemRepository.findAllByOwnerOrderById(userId, from, pageRequest).stream()
                 .map(item -> setBookingsForItem(item, userId))
-                .map(this::addCommentsForItem).collect(Collectors.toList()));
-        return page;
+                .map(this::addCommentsForItem).collect(Collectors.toList());
     }
 
     @Override
