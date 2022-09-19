@@ -117,7 +117,7 @@ class ItemRequestServiceImplTest {
         Page page = new PageImpl(requests);
         doReturn(true).when(userRepository).existsById(anyLong());
         doReturn(itemRequestDtoForResponse).when(itemRequestMapper).toItemRequestDtoForResponse(any(ItemRequest.class));
-        doReturn(page).when(itemRequestRepository).findAllByRequestorIsNot(any(long.class), any(int.class), any(PageRequest.class));
+        doReturn(page).when(itemRequestRepository).findAllByRequestorIsNot(any(long.class), any(PageRequest.class));
 
         List<ItemRequestDtoForResponse> list = service.getAllByOtherUsers(booker.getId(), 0, 10);
 

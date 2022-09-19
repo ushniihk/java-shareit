@@ -94,7 +94,7 @@ class ItemServiceImplTest {
         Page<Item> pageItems = new PageImpl<>(items);
         List<Booking> bookings = List.of(booking);
         List<Comment> comments = List.of(comment);
-        doReturn(pageItems).when(itemRepository).findAllByOwnerOrderById(any(Long.class), any(int.class), any(PageRequest.class));
+        doReturn(pageItems).when(itemRepository).findAllByOwnerOrderById(any(Long.class), any(PageRequest.class));
         doReturn(bookings).when(bookingRepository).findAllByItemIdAndStartIsBeforeOrderByStartDesc(any(Long.class), any(LocalDateTime.class));
         doReturn(comments).when(commentRepository).findAllByItem(anyLong());
         doReturn(UserMapper.toUser(booker)).when(userRepository).getReferenceById(any());
@@ -131,7 +131,7 @@ class ItemServiceImplTest {
         List<Item> items = List.of(itemReal);
         Page<Item> pageItems = new PageImpl<>(items);
 
-        doReturn(pageItems).when(itemRepository).findAll(anyInt(), any(PageRequest.class));
+        doReturn(pageItems).when(itemRepository).findAll(any(PageRequest.class));
 
         List<ItemDto> list = service.search(booker.getId(), "cut", 0, 10);
 

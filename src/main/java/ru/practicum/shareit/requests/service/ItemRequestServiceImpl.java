@@ -2,6 +2,7 @@ package ru.practicum.shareit.requests.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.practicum.shareit.exceptions.IncorrectParameterException;
 import ru.practicum.shareit.exceptions.NotFoundParameterException;
@@ -58,8 +59,8 @@ public class ItemRequestServiceImpl implements ItemRequestService {
             throw new IncorrectParameterException("bad size or index");
         if (!userRepository.existsById(userId))
             throw new NotFoundParameterException("bad user Id");
-        PageRequest pageRequest = PageRequest.of(0, size);
-        return itemRequestRepository.findAllByRequestorIsNot(userId, from, pageRequest).stream()
+        PageRequest pageRequest = PageRequest.of(from / size, size, Sort.by("id").ascending());
+        return itemRequestRepository.findAllByRequestorIsNot(userId, pageRequest).stream()
                 .map(itemRequestMapper::toItemRequestDtoForResponse).collect(Collectors.toList());
     }
 }

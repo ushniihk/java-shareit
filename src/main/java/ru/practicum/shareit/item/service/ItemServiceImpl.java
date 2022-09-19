@@ -2,6 +2,7 @@ package ru.practicum.shareit.item.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.practicum.shareit.booking.dao.BookingRepository;
 import ru.practicum.shareit.booking.mapper.BookingMapper;
@@ -41,8 +42,8 @@ public class ItemServiceImpl implements ItemService {
     public List<ItemDtoWithBooking> getAllByUser(long userId, int from, int size) {
         if (from < 0 || size <= 0)
             throw new IncorrectParameterException("bad size or index");
-        PageRequest pageRequest = PageRequest.of(0, size);
-        return itemRepository.findAllByOwnerOrderById(userId, from, pageRequest).stream()
+        PageRequest pageRequest = PageRequest.of(from / size, size, Sort.by("id").ascending());
+        return itemRepository.findAllByOwnerOrderById(userId, pageRequest).stream()
                 .map(item -> setBookingsForItem(item, userId))
                 .map(this::addCommentsForItem).collect(Collectors.toList());
     }
@@ -60,8 +61,8 @@ public class ItemServiceImpl implements ItemService {
     public List<ItemDto> search(long userId, String text, int from, int size) {
         if (text.isEmpty())
             return new ArrayList<>();
-        PageRequest pageRequest = PageRequest.of(0, size);
-        return itemRepository.findAll(from, pageRequest).stream()
+        PageRequest pageRequest = PageRequest.of(from / size, size, Sort.by("id").ascending());
+        return itemRepository.findAll(pageRequest).stream()
                 .filter(item -> item.getDescription().toLowerCase().contains(text.toLowerCase()))
                 .filter(item -> item.getAvailable().equals(true))
                 .map(ItemMapper::toItemDto)

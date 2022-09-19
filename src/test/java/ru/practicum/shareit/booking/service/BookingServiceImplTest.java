@@ -166,7 +166,7 @@ class BookingServiceImplTest {
                 .thenReturn(UserMapper.toUser(booker));
         when(bookingRepository.findBookingByStartAndEndAndBookerIdAndItemId(any(), any(), any(), any()))
                 .thenReturn(BookingMapper.toBooking(dto));
-        when(bookingRepository.findAllByBookerIdOrderByStartDesc(any(long.class), any(int.class), any(PageRequest.class)))
+        when(bookingRepository.findAllByBookerIdOrderByStartDesc(any(long.class), any(PageRequest.class)))
                 .thenReturn(page);
 
         List<BookingDtoWithItemAndUser> list = bookingService.findAll(booker.getId(), "ALL", 0, 2);
@@ -193,7 +193,7 @@ class BookingServiceImplTest {
                 .thenReturn(UserMapper.toUser(booker));
         when(bookingRepository.findBookingByStartAndEndAndBookerIdAndItemId(any(), any(), any(), any()))
                 .thenReturn(BookingMapper.toBooking(dto));
-        when(bookingRepository.findAllByItemIdOrderByStartDesc(any(long.class), any(int.class), any(PageRequest.class)))
+        when(bookingRepository.findAllByItemIdOrderByStartDesc(any(long.class), any(PageRequest.class)))
                 .thenReturn(page);
 
         List<BookingDtoWithItemAndUser> list = bookingService.findAllByItemOwner(booker.getId(), "ALL", 0, 2);

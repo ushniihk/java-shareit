@@ -12,13 +12,11 @@ import java.util.List;
 public interface BookingRepository extends JpaRepository<Booking, Long> {
     Booking findBookingByStartAndEndAndBookerIdAndItemId(LocalDateTime start, LocalDateTime end, Long userId, Long itemId);
 
-    @Query(value = "select * from bookings where booker_id = ?1 ORDER BY start_date desc " +
-            "offset ?2", nativeQuery = true)
-    Page<Booking> findAllByBookerIdOrderByStartDesc(Long userId, int from, Pageable pageable);
+    @Query(value = "select b from Booking b where b.bookerId = ?1")
+    Page<Booking> findAllByBookerIdOrderByStartDesc(Long userId, Pageable pageable);
 
-    @Query(value = "select * from bookings where item_id = ?1 ORDER BY start_date desc " +
-            "offset ?2", nativeQuery = true)
-    Page<Booking> findAllByItemIdOrderByStartDesc(Long itemId, int from, Pageable pageable);
+    @Query(value = "select b from Booking b where b.itemId = ?1")
+    Page<Booking> findAllByItemIdOrderByStartDesc(Long itemId, Pageable pageable);
 
     List<Booking> findAllByItemIdAndStartIsAfterOrderByStartAsc(long itemId, LocalDateTime start);
 

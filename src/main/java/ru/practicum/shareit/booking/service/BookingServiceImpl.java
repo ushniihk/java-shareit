@@ -2,6 +2,7 @@ package ru.practicum.shareit.booking.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.practicum.shareit.booking.dao.BookingRepository;
 import ru.practicum.shareit.booking.dto.BookingDto;
@@ -81,12 +82,12 @@ public class BookingServiceImpl implements BookingService {
         checkUser(userId);
         if (from < 0 || size <= 0)
             throw new IncorrectParameterException("bad size or index");
-        PageRequest pageRequest = PageRequest.of(0, size);
+        PageRequest pageRequest = PageRequest.of(from / size, size, Sort.by("start").descending());
         if (state.equals("ALL")) {
-            return listOfBookingDtoWithItemAndUsers(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, from, pageRequest).toList());
+            return listOfBookingDtoWithItemAndUsers(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, pageRequest).toList());
         }
         return listOfBookingDtoWithItemAndUsers(checkStatus(
-                new ArrayList<>(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, from, pageRequest).toList()), state));
+                new ArrayList<>(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, pageRequest).toList()), state));
     }
 
     @Override
@@ -94,11 +95,11 @@ public class BookingServiceImpl implements BookingService {
         checkUser(userId);
         if (from < 0 || size <= 0)
             throw new IncorrectParameterException("bad size or index");
-        PageRequest pageRequest = PageRequest.of(0, size);
+        PageRequest pageRequest = PageRequest.of(from / size, size, Sort.by("start").descending());
         List<Item> items = itemRepository.findAllByOwnerOrderById(userId);
         List<Booking> bookings = new ArrayList<>();
         for (Item i : items) {
-            bookings.addAll(bookingRepository.findAllByItemIdOrderByStartDesc(i.getId(), from, pageRequest).toList());
+            bookings.addAll(bookingRepository.findAllByItemIdOrderByStartDesc(i.getId(), pageRequest).toList());
         }
         if (state.equals("ALL")) {
             return listOfBookingDtoWithItemAndUsers(bookings);
