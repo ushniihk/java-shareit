@@ -2,6 +2,7 @@ package ru.practicum.shareit.booking.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.practicum.shareit.booking.dao.BookingRepository;
 import ru.practicum.shareit.booking.dto.BookingDto;
@@ -30,9 +31,6 @@ public class BookingServiceImpl implements BookingService {
     private final BookingRepository bookingRepository;
     private final ItemRepository itemRepository;
     private final UserRepository userRepository;
-    private final BookingMapper bookingMapper;
-    private final UserMapper userMapper;
-    private final ItemMapper itemMapper;
 
     @Override
     public BookingDtoWithItemAndUser add(long userId, BookingDto bookingDto) {
@@ -44,7 +42,7 @@ public class BookingServiceImpl implements BookingService {
             throw new NotFoundParameterException("user can't make a request for his item");
         bookingDto.setStatus(Booking.Status.WAITING);
         bookingDto.setBookerId(userId);
-        bookingRepository.save(bookingMapper.toBooking(bookingDto));
+        bookingRepository.save(BookingMapper.toBooking(bookingDto));
         return getBookingDtoWithItemAndUser(bookingDto);
     }
 
@@ -54,13 +52,13 @@ public class BookingServiceImpl implements BookingService {
         if (booking.getStatus().equals(Booking.Status.APPROVED))
             throw new IncorrectParameterException("status has already been approved");
         Item item = itemRepository.getReferenceById(booking.getItemId());
-        if (!item.getOwner().equals(userId))
+        if (item.getOwner() != userId)
             throw new NotFoundParameterException("user is not the owner");
         if (approved) {
             booking.setStatus(Booking.Status.APPROVED);
         } else booking.setStatus(Booking.Status.REJECTED);
         bookingRepository.save(booking);
-        BookingDto bookingDto = bookingMapper.toBookingDto(booking);
+        BookingDto bookingDto = BookingMapper.toBookingDto(booking);
         return getBookingDtoWithItemAndUser(bookingDto);
     }
 
@@ -70,7 +68,7 @@ public class BookingServiceImpl implements BookingService {
         if (!bookingRepository.existsById(bookingId)) {
             throw new NotFoundParameterException("bad booking id");
         }
-        BookingDto bookingDto = bookingMapper.toBookingDto(bookingRepository.getReferenceById(bookingId));
+        BookingDto bookingDto = BookingMapper.toBookingDto(bookingRepository.getReferenceById(bookingId));
         Item item = itemRepository.getReferenceById(bookingDto.getItemId());
         if (bookingDto.getBookerId() != userId && item.getOwner() != userId)
             throw new NotFoundParameterException("bad user id");
@@ -84,24 +82,24 @@ public class BookingServiceImpl implements BookingService {
         checkUser(userId);
         if (from < 0 || size <= 0)
             throw new IncorrectParameterException("bad size or index");
-        PageRequest pageRequest = PageRequest.of(0, size);
+        PageRequest pageRequest = PageRequest.of(from / size, size, Sort.by("start").descending());
         if (state.equals("ALL")) {
-            return listOfBookingDtoWithItemAndUsers(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, from, pageRequest).toList());
+            return listOfBookingDtoWithItemAndUsers(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, pageRequest).toList());
         }
         return listOfBookingDtoWithItemAndUsers(checkStatus(
-                new ArrayList<>(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, from, pageRequest).toList()), state));
+                new ArrayList<>(bookingRepository.findAllByBookerIdOrderByStartDesc(userId, pageRequest).toList()), state));
     }
 
     @Override
-    public List<BookingDtoWithItemAndUser> findAllByItemOwner(Long userId, String state, int from, int size) {
+    public List<BookingDtoWithItemAndUser> findAllByItemOwner(long userId, String state, int from, int size) {
         checkUser(userId);
         if (from < 0 || size <= 0)
             throw new IncorrectParameterException("bad size or index");
-        PageRequest pageRequest = PageRequest.of(0, size);
+        PageRequest pageRequest = PageRequest.of(from / size, size, Sort.by("start").descending());
         List<Item> items = itemRepository.findAllByOwnerOrderById(userId);
         List<Booking> bookings = new ArrayList<>();
         for (Item i : items) {
-            bookings.addAll(bookingRepository.findAllByItemIdOrderByStartDesc(i.getId(), from, pageRequest).toList());
+            bookings.addAll(bookingRepository.findAllByItemIdOrderByStartDesc(i.getId(), pageRequest).toList());
         }
         if (state.equals("ALL")) {
             return listOfBookingDtoWithItemAndUsers(bookings);
@@ -129,11 +127,11 @@ public class BookingServiceImpl implements BookingService {
     }
 
     private BookingDtoWithItemAndUser getBookingDtoWithItemAndUser(BookingDto bookingDto) {
-        BookingDtoWithItemAndUser bookingDtoWithItemAndUser = bookingMapper.toBookingDtoWithItemAndUser(
-                bookingMapper.toBookingDto(bookingRepository.findBookingByStartAndEndAndBookerIdAndItemId(
+        BookingDtoWithItemAndUser bookingDtoWithItemAndUser = BookingMapper.toBookingDtoWithItemAndUser(
+                BookingMapper.toBookingDto(bookingRepository.findBookingByStartAndEndAndBookerIdAndItemId(
                         bookingDto.getStart(), bookingDto.getEnd(), bookingDto.getBookerId(), bookingDto.getItemId())));
-        UserDto bookerDto = userMapper.toUserDto(userRepository.getReferenceById(bookingDto.getBookerId()));
-        ItemDto itemDto = itemMapper.toItemDto(itemRepository.getReferenceById(bookingDto.getItemId()));
+        UserDto bookerDto = UserMapper.toUserDto(userRepository.getReferenceById(bookingDto.getBookerId()));
+        ItemDto itemDto = ItemMapper.toItemDto(itemRepository.getReferenceById(bookingDto.getItemId()));
         bookingDtoWithItemAndUser.setBooker(bookerDto);
         bookingDtoWithItemAndUser.setItem(itemDto);
         return bookingDtoWithItemAndUser;
@@ -172,7 +170,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     private List<BookingDtoWithItemAndUser> listOfBookingDtoWithItemAndUsers(List<Booking> bookings) {
-        return bookings.stream().map(bookingMapper::toBookingDto)
+        return bookings.stream().map(BookingMapper::toBookingDto)
                 .map(this::getBookingDtoWithItemAndUser).collect(Collectors.toList());
     }
 }

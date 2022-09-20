@@ -16,11 +16,10 @@ import java.util.stream.Collectors;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
-    private final UserMapper userMapper;
 
     @Override
     public List<UserDto> getAll() {
-        return userRepository.findAll().stream().map(userMapper::toUserDto).collect(Collectors.toList());
+        return userRepository.findAll().stream().map(UserMapper::toUserDto).collect(Collectors.toList());
     }
 
     @Override
@@ -28,14 +27,14 @@ public class UserServiceImpl implements UserService {
         if (!userRepository.existsById(userId)) {
             throw new NotFoundParameterException("bad id");
         }
-        return userMapper.toUserDto(userRepository.getReferenceById(userId));
+        return UserMapper.toUserDto(userRepository.getReferenceById(userId));
     }
 
     @Override
     public UserDto add(UserDto userDto) {
         checkEmail(userDto);
-        userRepository.save(userMapper.toUser(userDto));
-        return userMapper.toUserDto(userRepository.getUserByEmail(userDto.getEmail()));
+        userRepository.save(UserMapper.toUser(userDto));
+        return UserMapper.toUserDto(userRepository.getUserByEmail(userDto.getEmail()));
     }
 
     @Override
@@ -53,7 +52,7 @@ public class UserServiceImpl implements UserService {
         }
         if (userDto.getName() != null)
             oldUserDto.setName(userDto.getName());
-        userRepository.save(userMapper.toUser(oldUserDto));
+        userRepository.save(UserMapper.toUser(oldUserDto));
         return oldUserDto;
     }
 

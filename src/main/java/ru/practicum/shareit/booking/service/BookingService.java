@@ -14,6 +14,6 @@ public interface BookingService {
 
     List<BookingDtoWithItemAndUser> findAll(long userId, String state, int from, int size);
 
-    List<BookingDtoWithItemAndUser> findAllByItemOwner(Long userId, String state, int from, int size);
+    List<BookingDtoWithItemAndUser> findAllByItemOwner(long userId, String state, int from, int size);
 
 }

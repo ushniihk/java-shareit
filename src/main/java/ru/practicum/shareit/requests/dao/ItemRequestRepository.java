@@ -11,8 +11,9 @@ import java.util.List;
 public interface ItemRequestRepository extends JpaRepository<ItemRequest, Long> {
     List<ItemRequest> findAllByRequestor(long requestorId);
 
-    @Query(value = "select * from requests where requestor_id not in (?1) " +
-            "offset ?2", nativeQuery = true)
-    Page<ItemRequest> findAllByRequestorIsNot(long requestorId, int from, PageRequest pageRequest);
+    @Query(value = "select r from ItemRequest r where r.requestor not in (?1)")
+    Page<ItemRequest> findAllByRequestorIsNot(long requestorId, PageRequest pageRequest);
 
+/*    @Query(value = "select * from requests where requestor_id not in (?1) " +
+            "offset ?2", nativeQuery = true)*/
 }
