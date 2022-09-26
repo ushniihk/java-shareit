@@ -4,76 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="style: fix pagination">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/api-tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/api-tests.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/ShareItApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/controller/BookingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/dao/BookingRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/dto/BookingDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/dto/BookingDtoWithItemAndUser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/mapper/BookingMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/model/Booking.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/service/BookingService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/service/BookingServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/CreatingException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/ErrorHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/ErrorResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/IncorrectParameterException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/NotFoundParameterException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/UpdateException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/controller/ItemController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dao/CommentRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dao/ItemRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/CommentDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/CommentDtoWithAuthorAndItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/ItemDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/ItemDtoWithBooking.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/mapper/CommentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/mapper/ItemMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/model/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/model/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/service/ItemService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/service/ItemServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/controller/ItemRequestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/dao/ItemRequestRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/mapper/ItemRequestMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/model/ItemRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/model/dto/ItemRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/model/dto/ItemRequestDtoForResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/service/ItemRequestService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/service/ItemRequestServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/dao/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/dto/UserDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/mapper/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/service/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/ShareItTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/booking/controller/BookingControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/booking/dto/BookingDtoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/booking/service/BookingServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/exceptions/ErrorHandlerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/controller/ItemControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/dto/CommentDtoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/dto/ItemDtoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/service/ItemServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/controller/ItemRequestControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/mapper/ItemRequestMapperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/model/dto/ItemRequestDtoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/service/ItemRequestServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/user/controller/UserControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/user/dto/UserDtoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/user/service/UserServiceImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/schema.sql" beforeDir="false" />
+    <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="refactor: split by 2 microservices">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/ShareItTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/ShareItTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/booking/controller/BookingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/booking/controller/BookingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/booking/dto/BookingDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/booking/dto/BookingDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/booking/service/BookingServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/booking/service/BookingServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/exceptions/ErrorHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/exceptions/ErrorHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/item/controller/ItemControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/item/controller/ItemControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/item/dto/CommentDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/item/dto/CommentDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/item/dto/ItemDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/item/dto/ItemDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/item/service/ItemServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/item/service/ItemServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/requests/controller/ItemRequestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/requests/controller/ItemRequestControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/requests/mapper/ItemRequestMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/requests/mapper/ItemRequestMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/requests/model/dto/ItemRequestDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/requests/model/dto/ItemRequestDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/requests/service/ItemRequestServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/requests/service/ItemRequestServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/user/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/user/controller/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/user/dto/UserDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/user/dto/UserDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/test/ru/practicum/shareit/user/service/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/ru/practicum/shareit/user/service/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +105,8 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/src/test/java" />
+      <recent name="$PROJECT_DIR$/server/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -170,17 +123,7 @@
       <recent name="ru.practicum.shareit.item.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ShareItTests">
-    <configuration name="All in shareit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shareit" />
-      <extension name="coverage" runner="jacoco" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ru.practicum.shareit in shareit-server">
     <configuration name="All in shareit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shareit" />
       <option name="PACKAGE_NAME" value="" />
@@ -191,34 +134,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ShareItTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ItemRequestControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="shareit-server" />
       <extension name="coverage" runner="jacoco">
         <pattern>
-          <option name="PATTERN" value="ru.practicum.shareit.*" />
+          <option name="PATTERN" value="ru.practicum.shareit.requests.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.practicum.shareit" />
-      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.ShareItTests" />
+      <option name="PACKAGE_NAME" value="ru.practicum.shareit.requests.controller" />
+      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.requests.controller.ItemRequestControllerTest" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ShareItTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shareit-server" />
-      <extension name="coverage" runner="jacoco">
-        <pattern>
-          <option name="PATTERN" value="ru.practicum.shareit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.practicum.shareit" />
-      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.ShareItTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -239,6 +166,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDtoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit-server" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="ru.practicum.shareit.user.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practicum.shareit.user.dto" />
+      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.user.dto.UserDtoTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit-server" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="ru.practicum.shareit.user.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practicum.shareit.user.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.user.service.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <module name="shareit" />
       <extension name="coverage" runner="jacoco" />
@@ -248,15 +207,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ru.practicum.shareit in shareit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shareit" />
-      <extension name="coverage" runner="jacoco">
-        <pattern>
-          <option name="PATTERN" value="ru.practicum.shareit.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="ru.practicum.shareit in shareit-server" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit-server" />
+      <extension name="coverage" runner="jacoco" />
       <option name="PACKAGE_NAME" value="ru.practicum.shareit" />
+      <option name="MAIN_CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
@@ -296,11 +251,11 @@
     <list>
       <item itemvalue="Application.ShareItGateway" />
       <item itemvalue="Application.ShareItServer" />
-      <item itemvalue="JUnit.All in shareit" />
-      <item itemvalue="JUnit.ShareItTests.contextLoads" />
+      <item itemvalue="JUnit.ru.practicum.shareit in shareit-server" />
+      <item itemvalue="JUnit.ItemRequestControllerTest" />
       <item itemvalue="JUnit.UserControllerTest" />
-      <item itemvalue="JUnit.ShareItTests" />
-      <item itemvalue="JUnit.ru.practicum.shareit in shareit" />
+      <item itemvalue="JUnit.UserDtoTest" />
+      <item itemvalue="JUnit.UserServiceImplTest" />
       <item itemvalue="Spring Boot.ShareItGateway (1)" />
       <item itemvalue="Spring Boot.ShareItServer" />
       <item itemvalue="Spring Boot.ShareItApp (1)" />
@@ -308,11 +263,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ShareItTests" />
-        <item itemvalue="JUnit.All in shareit" />
-        <item itemvalue="JUnit.ru.practicum.shareit in shareit" />
-        <item itemvalue="JUnit.ShareItTests.contextLoads" />
+        <item itemvalue="JUnit.ru.practicum.shareit in shareit-server" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="JUnit.UserDtoTest" />
         <item itemvalue="JUnit.UserControllerTest" />
+        <item itemvalue="JUnit.ItemRequestControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +297,7 @@
       <workItem from="1664021901763" duration="205000" />
       <workItem from="1664022540980" duration="1390000" />
       <workItem from="1664034707477" duration="284000" />
-      <workItem from="1664035011339" duration="16876000" />
+      <workItem from="1664035011339" duration="19004000" />
     </task>
     <task id="LOCAL-00001" summary="feature: add booking and comments">
       <created>1662144393350</created>
@@ -645,7 +600,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663611774160</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="refactor: split by 2 microservices">
+      <created>1664208088728</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1664208088728</updated>
+    </task>
+    <task id="LOCAL-00045" summary="refactor: split by 2 microservices">
+      <created>1664208523418</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1664208523418</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,7 +733,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge remote-tracking branch 'origin/add-bookings' into add-bookings" />
     <MESSAGE value="300" />
     <MESSAGE value="301" />
     <MESSAGE value="302" />
@@ -789,7 +757,8 @@
     <MESSAGE value="style: fix7" />
     <MESSAGE value="style: fix8" />
     <MESSAGE value="style: fix pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: fix pagination" />
+    <MESSAGE value="refactor: split by 2 microservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: split by 2 microservices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -801,7 +770,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/ru/practicum/shareit/item/service/ItemServiceImpl.java</url>
-          <line>60</line>
+          <line>59</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -827,6 +796,7 @@
     <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit__2_.ic" NAME="All in shareit (2) Coverage Results" MODIFIED="1663522473482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit.exec" NAME="All in shareit Coverage Results" MODIFIED="1663523484520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit.ic" NAME="All in shareit Coverage Results" MODIFIED="1663516744622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_shareit1$All_in_shareit.exec" NAME="All in shareit Coverage Results" MODIFIED="1664209991981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit__2_.exec" NAME="All in shareit (2) Coverage Results" MODIFIED="1663522721453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

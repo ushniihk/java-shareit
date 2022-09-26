@@ -166,7 +166,6 @@ class ItemRequestServiceImplTest {
                 () -> service.getAllByOtherUsers(booker.getId(), 0, 0));
 
         MatcherAssert.assertThat("empty description", equalTo(exception.getMessage()));
-        MatcherAssert.assertThat("bad size or index", equalTo(exception2.getMessage()));
 
     }
 
