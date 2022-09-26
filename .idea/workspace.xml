@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="style: fix pagination">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/api-tests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/api-tests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/checkstyle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/ShareItApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/controller/BookingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/dao/BookingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/dto/BookingDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/dto/BookingDtoWithItemAndUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/mapper/BookingMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/model/Booking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/service/BookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/booking/service/BookingServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/CreatingException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/ErrorHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/IncorrectParameterException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/NotFoundParameterException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/exceptions/UpdateException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/controller/ItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dao/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dao/ItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/CommentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/CommentDtoWithAuthorAndItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/ItemDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/dto/ItemDtoWithBooking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/mapper/CommentMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/mapper/ItemMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/model/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/model/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/service/ItemService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/item/service/ItemServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/controller/ItemRequestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/dao/ItemRequestRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/mapper/ItemRequestMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/model/ItemRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/model/dto/ItemRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/model/dto/ItemRequestDtoForResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/service/ItemRequestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/requests/service/ItemRequestServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/dao/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/dto/UserDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/practicum/shareit/user/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/ShareItTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/booking/controller/BookingControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/booking/dto/BookingDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/booking/service/BookingServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/exceptions/ErrorHandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/controller/ItemControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/dto/CommentDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/dto/ItemDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/item/service/ItemServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/controller/ItemRequestControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/mapper/ItemRequestMapperTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/model/dto/ItemRequestDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/requests/service/ItemRequestServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/user/controller/UserControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/user/dto/UserDtoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/practicum/shareit/user/service/UserServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/schema.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="add-bookings" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2DdHS87xdkHeuJtGj7a1apXZo0m" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/aleksandrborisevic/IdeaProjects/java-shareit1/server/src/main/test",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "6fd1282fafc099beaec8989f63e436d4"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ],
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "PostgreSQL",
+      "DB2_IS"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/src/main/test" />
+      <recent name="$PROJECT_DIR$/gateway/src/main/java/ru/practicum/shareit" />
+      <recent name="$PROJECT_DIR$/gateway/src/main/java/ru/practicum/shareit/item/dto" />
+      <recent name="$PROJECT_DIR$/server/src/main/resources" />
+      <recent name="$PROJECT_DIR$/../" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ru.practicum.shareit.exceptions" />
+      <recent name="ru.practicum.shareit.user.service" />
+      <recent name="ru.practicum.shareit.requests.mapper" />
+      <recent name="ru.practicum.shareit.requests.service" />
+      <recent name="ru.practicum.shareit.item.service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.practicum.shareit.request" />
+      <recent name="ru.practicum.shareit" />
+      <recent name="ru.practicum.shareit.item" />
+      <recent name="ru.practicum.shareit.item.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ShareItTests">
+    <configuration name="All in shareit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit" />
+      <extension name="coverage" runner="jacoco" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in shareit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShareItTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit-server" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="ru.practicum.shareit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practicum.shareit" />
+      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.ShareItTests" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShareItTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit-server" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="ru.practicum.shareit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practicum.shareit" />
+      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.ShareItTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit-server" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="ru.practicum.shareit.user.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practicum.shareit.user.controller" />
+      <option name="MAIN_CLASS_NAME" value="ru.practicum.shareit.user.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="shareit" />
+      <extension name="coverage" runner="jacoco" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ru.practicum.shareit in shareit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shareit" />
+      <extension name="coverage" runner="jacoco">
+        <pattern>
+          <option name="PATTERN" value="ru.practicum.shareit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.practicum.shareit" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShareItApp (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="java-shareit1" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.practicum.shareit.ShareItApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShareItApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="shareit" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.practicum.shareit.ShareItApp" />
+      <extension name="coverage" runner="jacoco" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShareItGateway (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shareit-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.practicum.shareit.ShareItGateway" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShareItServer" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shareit-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.practicum.shareit.ShareItServer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ShareItGateway" />
+      <item itemvalue="Application.ShareItServer" />
+      <item itemvalue="JUnit.All in shareit" />
+      <item itemvalue="JUnit.ShareItTests.contextLoads" />
+      <item itemvalue="JUnit.UserControllerTest" />
+      <item itemvalue="JUnit.ShareItTests" />
+      <item itemvalue="JUnit.ru.practicum.shareit in shareit" />
+      <item itemvalue="Spring Boot.ShareItGateway (1)" />
+      <item itemvalue="Spring Boot.ShareItServer" />
+      <item itemvalue="Spring Boot.ShareItApp (1)" />
+      <item itemvalue="Spring Boot.ShareItApp" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ShareItTests" />
+        <item itemvalue="JUnit.All in shareit" />
+        <item itemvalue="JUnit.ru.practicum.shareit in shareit" />
+        <item itemvalue="JUnit.ShareItTests.contextLoads" />
+        <item itemvalue="JUnit.UserControllerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="" />
+      <created>1661022038263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661022038263</updated>
+      <workItem from="1661022039387" duration="958000" />
+      <workItem from="1661023003076" duration="860000" />
+      <workItem from="1661596832774" duration="73304000" />
+      <workItem from="1662149073503" duration="7609000" />
+      <workItem from="1662207928488" duration="6560000" />
+      <workItem from="1662218330691" duration="3095000" />
+      <workItem from="1662658442472" duration="108972000" />
+      <workItem from="1663529039521" duration="2498000" />
+      <workItem from="1663563373033" duration="7966000" />
+      <workItem from="1663690736580" duration="125000" />
+      <workItem from="1663921299138" duration="737000" />
+      <workItem from="1663923963687" duration="323000" />
+      <workItem from="1663924363167" duration="11343000" />
+      <workItem from="1664004868759" duration="52000" />
+      <workItem from="1664004944802" duration="1070000" />
+      <workItem from="1664021901763" duration="205000" />
+      <workItem from="1664022540980" duration="1390000" />
+      <workItem from="1664034707477" duration="284000" />
+      <workItem from="1664035011339" duration="16876000" />
+    </task>
+    <task id="LOCAL-00001" summary="feature: add booking and comments">
+      <created>1662144393350</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662144393350</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix pom">
+      <created>1662145545973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662145545973</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix pom">
+      <created>1662146430590</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1662146430590</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix pom">
+      <created>1662146594262</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662146594262</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/add-bookings' into add-bookings">
+      <created>1662148389775</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1662148389775</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix">
+      <created>1662148425833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1662148425833</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix">
+      <created>1662148605670</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662148605670</updated>
+    </task>
+    <task id="LOCAL-00008" summary="s">
+      <created>1662149052289</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1662149052289</updated>
+    </task>
+    <task id="LOCAL-00009" summary="1">
+      <created>1662149450410</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1662149450410</updated>
+    </task>
+    <task id="LOCAL-00010" summary="12">
+      <created>1662149576116</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1662149576116</updated>
+    </task>
+    <task id="LOCAL-00011" summary="asd">
+      <created>1662150415988</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1662150415988</updated>
+    </task>
+    <task id="LOCAL-00012" summary="asd">
+      <created>1662150595561</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1662150595561</updated>
+    </task>
+    <task id="LOCAL-00013" summary="asd">
+      <created>1662150654480</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1662150654480</updated>
+    </task>
+    <task id="LOCAL-00014" summary="asd">
+      <created>1662150798864</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1662150798864</updated>
+    </task>
+    <task id="LOCAL-00015" summary="300">
+      <created>1662151195838</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1662151195838</updated>
+    </task>
+    <task id="LOCAL-00016" summary="300">
+      <created>1662151423934</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1662151423934</updated>
+    </task>
+    <task id="LOCAL-00017" summary="301">
+      <created>1662151634549</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1662151634549</updated>
+    </task>
+    <task id="LOCAL-00018" summary="302">
+      <created>1662152300365</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1662152300365</updated>
+    </task>
+    <task id="LOCAL-00019" summary="303">
+      <created>1662154965997</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1662154965997</updated>
+    </task>
+    <task id="LOCAL-00020" summary="303">
+      <created>1662155214205</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1662155214205</updated>
+    </task>
+    <task id="LOCAL-00021" summary="303">
+      <created>1662155247482</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1662155247482</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactor: make Mapper as bean">
+      <created>1662210745062</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1662210745063</updated>
+    </task>
+    <task id="LOCAL-00023" summary="305">
+      <created>1662213016605</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1662213016605</updated>
+    </task>
+    <task id="LOCAL-00024" summary="306">
+      <created>1662217299394</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1662217299394</updated>
+    </task>
+    <task id="LOCAL-00025" summary="307">
+      <created>1662217535490</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1662217535490</updated>
+    </task>
+    <task id="LOCAL-00026" summary="308">
+      <created>1662218682130</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1662218682130</updated>
+    </task>
+    <task id="LOCAL-00027" summary="309">
+      <created>1662219073041</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1662219073041</updated>
+    </task>
+    <task id="LOCAL-00028" summary="310">
+      <created>1662219624593</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1662219624593</updated>
+    </task>
+    <task id="LOCAL-00029" summary="311">
+      <created>1662219973637</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1662219973637</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: add itemRequest and pagination">
+      <created>1663007104734</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1663007104734</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: add tests">
+      <created>1663519152577</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663519152577</updated>
+    </task>
+    <task id="LOCAL-00032" summary="style: fix">
+      <created>1663520074406</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1663520074406</updated>
+    </task>
+    <task id="LOCAL-00033" summary="style: fix1">
+      <created>1663523545281</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1663523545281</updated>
+    </task>
+    <task id="LOCAL-00034" summary="style: fix2">
+      <created>1663524148490</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1663524148490</updated>
+    </task>
+    <task id="LOCAL-00035" summary="style: fix3">
+      <created>1663526853935</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1663526853935</updated>
+    </task>
+    <task id="LOCAL-00036" summary="style: fix4">
+      <created>1663527174728</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1663527174728</updated>
+    </task>
+    <task id="LOCAL-00037" summary="style: fix5">
+      <created>1663530166060</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1663530166060</updated>
+    </task>
+    <task id="LOCAL-00038" summary="style: fix5">
+      <created>1663530281487</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1663530281487</updated>
+    </task>
+    <task id="LOCAL-00039" summary="style: fix6">
+      <created>1663530628917</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1663530628917</updated>
+    </task>
+    <task id="LOCAL-00040" summary="style: fix7">
+      <created>1663563515551</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1663563515551</updated>
+    </task>
+    <task id="LOCAL-00041" summary="style: fix7">
+      <created>1663563816828</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1663563816828</updated>
+    </task>
+    <task id="LOCAL-00042" summary="style: fix8">
+      <created>1663605497908</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1663605497908</updated>
+    </task>
+    <task id="LOCAL-00043" summary="style: fix pagination">
+      <created>1663611774160</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1663611774160</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="2a26a8bd-3a89-40db-86ff-a7fbe611cd16">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="5368d3ba-861c-4ed0-ae6d-99c042931329">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/aleksandrborisevic/IdeaProjects/java-shareit/src" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="fc949981-db3b-4f8b-8b6a-81cc626b6a67">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="fc949981-db3b-4f8b-8b6a-81cc626b6a67" value="TOOL_WINDOW" />
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge remote-tracking branch 'origin/add-bookings' into add-bookings" />
+    <MESSAGE value="300" />
+    <MESSAGE value="301" />
+    <MESSAGE value="302" />
+    <MESSAGE value="303" />
+    <MESSAGE value="refactor: make Mapper as bean" />
+    <MESSAGE value="305" />
+    <MESSAGE value="306" />
+    <MESSAGE value="307" />
+    <MESSAGE value="308" />
+    <MESSAGE value="309" />
+    <MESSAGE value="310" />
+    <MESSAGE value="311" />
+    <MESSAGE value="feat: add itemRequest and pagination" />
+    <MESSAGE value="feat: add tests" />
+    <MESSAGE value="style: fix" />
+    <MESSAGE value="style: fix1" />
+    <MESSAGE value="style: fix2" />
+    <MESSAGE value="style: fix3" />
+    <MESSAGE value="style: fix4" />
+    <MESSAGE value="style: fix5" />
+    <MESSAGE value="style: fix6" />
+    <MESSAGE value="style: fix7" />
+    <MESSAGE value="style: fix8" />
+    <MESSAGE value="style: fix pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: fix pagination" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/ru/practicum/shareit/booking/BookingClient.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/ru/practicum/shareit/item/service/ItemServiceImpl.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/ru/practicum/shareit/request/ItemRequestGatewayController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/ru/practicum/shareit/booking/BookingGatewayController.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit__1_.ic" NAME="All in shareit (1) Coverage Results" MODIFIED="1663521962874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit__1_.exec" NAME="All in shareit (1) Coverage Results" MODIFIED="1663522656861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit__3_.exec" NAME="All in shareit (3) Coverage Results" MODIFIED="1663523177617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_shareit$ru_practicum_shareit_in_shareit.ic" NAME="ru.practicum.shareit in shareit Coverage Results" MODIFIED="1663517508456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.practicum.shareit.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit__2_.ic" NAME="All in shareit (2) Coverage Results" MODIFIED="1663522473482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit.exec" NAME="All in shareit Coverage Results" MODIFIED="1663523484520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit.ic" NAME="All in shareit Coverage Results" MODIFIED="1663516744622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_shareit$All_in_shareit__2_.exec" NAME="All in shareit (2) Coverage Results" MODIFIED="1663522721453" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="jacoco" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>
