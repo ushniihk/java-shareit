@@ -1,4 +1,6 @@
 HELP.md
+target/
+!**/src/main/**/target/
 
 ### STS ###
 .apt_generated
