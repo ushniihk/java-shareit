@@ -1,0 +1,16 @@
+ru/practicum/shareit/requests/model/dto/ItemRequestDtoTest.class
+ru/practicum/shareit/booking/controller/BookingControllerTest.class
+ru/practicum/shareit/item/service/ItemServiceImplTest.class
+ru/practicum/shareit/requests/mapper/ItemRequestMapperTest.class
+ru/practicum/shareit/exceptions/ErrorHandlerTest.class
+ru/practicum/shareit/item/dto/ItemDtoTest.class
+ru/practicum/shareit/ShareItTests.class
+ru/practicum/shareit/booking/dto/BookingDtoTest.class
+ru/practicum/shareit/item/dto/CommentDtoTest.class
+ru/practicum/shareit/user/controller/UserControllerTest.class
+ru/practicum/shareit/user/service/UserServiceImplTest.class
+ru/practicum/shareit/requests/controller/ItemRequestControllerTest.class
+ru/practicum/shareit/requests/service/ItemRequestServiceImplTest.class
+ru/practicum/shareit/item/controller/ItemControllerTest.class
+ru/practicum/shareit/user/dto/UserDtoTest.class
+ru/practicum/shareit/booking/service/BookingServiceImplTest.class

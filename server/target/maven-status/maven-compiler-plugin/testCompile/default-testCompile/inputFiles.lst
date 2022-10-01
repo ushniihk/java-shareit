@@ -1,0 +1,16 @@
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/item/dto/ItemDtoTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/booking/service/BookingServiceImplTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/booking/controller/BookingControllerTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/exceptions/ErrorHandlerTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/item/dto/CommentDtoTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/requests/model/dto/ItemRequestDtoTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/user/controller/UserControllerTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/requests/service/ItemRequestServiceImplTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/requests/mapper/ItemRequestMapperTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/item/controller/ItemControllerTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/item/service/ItemServiceImplTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/booking/dto/BookingDtoTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/requests/controller/ItemRequestControllerTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/ShareItTests.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/user/dto/UserDtoTest.java
+/Users/aleksandrborisevic/IdeaProjects/java-shareit/server/src/test/java/ru/practicum/shareit/user/service/UserServiceImplTest.java
