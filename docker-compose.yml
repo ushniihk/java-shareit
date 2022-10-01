@@ -7,7 +7,7 @@ services:
     depends_on:
       - server
     environment:
-      - SHAREIT_SERVER_URL=http://server:9090
+      - SHAREIT_SERVER_URL=http://localhost:9090
 
   server:
     build: server
@@ -22,7 +22,7 @@ services:
       - DB_HOST=db
       - DB_PORT=5432
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/shareit
-      - spring.datasource.url=jdbc:h2:mem:${DB_NAME}
+      #- spring.datasource.url=jdbc:h2:mem:${DB_NAME}
 
 
   db:
