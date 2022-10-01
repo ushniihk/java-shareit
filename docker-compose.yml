@@ -19,9 +19,10 @@ services:
       - DB_NAME=shareit
       - POSTGRES_USER=sa
       - POSTGRES_PASSWORD=password
-      - DB_HOST=localhost
+      - DB_HOST=db
       - DB_PORT=5432
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/shareit
+      - spring.datasource.url=jdbc:h2:mem:${DB_NAME}
 
 
   db:

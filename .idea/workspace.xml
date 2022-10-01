@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="fix1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/shareit-server-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/shareit-server-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/shareit-server-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/shareit-server-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/shareit-gateway-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/shareit-gateway-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/target/shareit-gateway-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/target/shareit-gateway-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.ShareItTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.ShareItTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.controller.BookingControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.controller.BookingControllerTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.dto.BookingDtoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.dto.BookingDtoTest.xml" afterDir="false" />
@@ -28,13 +28,14 @@
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.service.UserServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.service.UserServiceImplTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.ShareItTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.ShareItTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.controller.BookingControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.controller.BookingControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.dto.BookingDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.dto.BookingDtoTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.service.BookingServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.service.BookingServiceImplTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.exceptions.ErrorHandlerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.exceptions.ErrorHandlerTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.controller.ItemControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.controller.ItemControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.CommentDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.CommentDtoTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.ItemDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.ItemDtoTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.service.ItemServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.service.ItemServiceImplTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.controller.ItemRequestControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.controller.ItemRequestControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.mapper.ItemRequestMapperTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.mapper.ItemRequestMapperTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.model.dto.ItemRequestDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.model.dto.ItemRequestDtoTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.service.ItemRequestServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.service.ItemRequestServiceImplTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.controller.UserControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.controller.UserControllerTest.txt" afterDir="false" />
@@ -308,14 +309,7 @@
       <workItem from="1664297372039" duration="168000" />
       <workItem from="1664297555626" duration="31258000" />
       <workItem from="1664555260237" duration="13830000" />
-      <workItem from="1664573382359" duration="15560000" />
-    </task>
-    <task id="LOCAL-00001" summary="feature: add booking and comments">
-      <created>1662144393350</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1662144393350</updated>
+      <workItem from="1664573382359" duration="16654000" />
     </task>
     <task id="LOCAL-00002" summary="fix pom">
       <created>1662145545973</created>
@@ -653,7 +647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664627484587</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fix1">
+      <created>1664628331658</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1664628331659</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
