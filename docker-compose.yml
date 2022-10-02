@@ -17,9 +17,10 @@ services:
     depends_on:
       - db
     environment:
+      - SERVER_PORT=9090
       - DB_NAME=shareit
-      - SPRING_DATASOURCE_USERNAME=sa
-      - SPRING_DATASOURCE_PASSWORD=password
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=password
       - DB_HOST=db
       - DB_PORT=5432
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/shareit
@@ -32,5 +33,5 @@ services:
       - "6541:5432"
     environment:
       - POSTGRES_DB=shareit
-      - SPRING_DATASOURCE_USERNAME=sa
-      - SPRING_DATASOURCE_PASSWORD=password
+      - POSTGRES_USER=sa
+      - POSTGRES_PASSWORD=password
