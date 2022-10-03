@@ -16,6 +16,8 @@ services:
       - "9090:9090"
     depends_on:
       - db
+    volumes:
+      - ./scripts/postgres:/docker-entrypoint-initdb.d/
     environment:
       - SERVER_PORT=9090
       - DB_NAME=shareit
@@ -24,7 +26,6 @@ services:
       - DB_HOST=db
       - DB_PORT=5432
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/shareit
-      #- spring.datasource.url=jdbc:h2:mem:${DB_NAME}
 
 
   db:
