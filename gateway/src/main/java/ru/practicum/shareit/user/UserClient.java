@@ -21,7 +21,8 @@ public class UserClient extends BaseClient {
                         .uriTemplateHandler(new DefaultUriBuilderFactory(serverUrl + API_PREFIX))
                         .requestFactory(HttpComponentsClientHttpRequestFactory::new)
                         .build()
-        );}
+        );
+    }
 
     public ResponseEntity<Object> getUsers() {
         return get("");
@@ -38,6 +39,7 @@ public class UserClient extends BaseClient {
     public ResponseEntity<Object> deleteUser(long userId) {
         return delete("/" + userId);
     }
+
     public ResponseEntity<Object> updateUser(long userId, UserDto userDto) {
         return patch("/" + userId, userDto);
     }
