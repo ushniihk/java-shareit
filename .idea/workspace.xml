@@ -4,43 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="fix4">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.ShareItTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.ShareItTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.controller.BookingControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.controller.BookingControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.dto.BookingDtoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.dto.BookingDtoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.service.BookingServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.booking.service.BookingServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.exceptions.ErrorHandlerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.exceptions.ErrorHandlerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.controller.ItemControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.controller.ItemControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.dto.CommentDtoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.dto.CommentDtoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.dto.ItemDtoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.dto.ItemDtoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.service.ItemServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.item.service.ItemServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.controller.ItemRequestControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.controller.ItemRequestControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.mapper.ItemRequestMapperTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.mapper.ItemRequestMapperTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.model.dto.ItemRequestDtoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.model.dto.ItemRequestDtoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.service.ItemRequestServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.requests.service.ItemRequestServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.controller.UserControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.controller.UserControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.dto.UserDtoTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.dto.UserDtoTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.service.UserServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/TEST-ru.practicum.shareit.user.service.UserServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.ShareItTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.ShareItTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.controller.BookingControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.controller.BookingControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.dto.BookingDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.dto.BookingDtoTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.service.BookingServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.booking.service.BookingServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.exceptions.ErrorHandlerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.exceptions.ErrorHandlerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.controller.ItemControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.controller.ItemControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.CommentDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.CommentDtoTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.ItemDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.dto.ItemDtoTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.service.ItemServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.item.service.ItemServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.controller.ItemRequestControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.controller.ItemRequestControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.mapper.ItemRequestMapperTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.mapper.ItemRequestMapperTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.model.dto.ItemRequestDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.model.dto.ItemRequestDtoTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.service.ItemRequestServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.requests.service.ItemRequestServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.controller.UserControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.controller.UserControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.dto.UserDtoTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.dto.UserDtoTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.service.UserServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/target/surefire-reports/ru.practicum.shareit.user.service.UserServiceImplTest.txt" afterDir="false" />
-    </list>
+    <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="fix4" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -309,14 +273,7 @@
       <workItem from="1664297372039" duration="168000" />
       <workItem from="1664297555626" duration="31258000" />
       <workItem from="1664555260237" duration="13830000" />
-      <workItem from="1664573382359" duration="50227000" />
-    </task>
-    <task id="LOCAL-00019" summary="303">
-      <created>1662154965997</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1662154965997</updated>
+      <workItem from="1664573382359" duration="50764000" />
     </task>
     <task id="LOCAL-00020" summary="303">
       <created>1662155214205</created>
@@ -654,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664901056138</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="fix4">
+      <created>1664908923447</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1664908923447</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
