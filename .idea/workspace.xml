@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="fix4" />
+    <list default="true" id="3c1f4c6a-2b5d-4feb-9098-a32ee9d0ab40" name="Changes" comment="fix4">
+      <change afterPath="$PROJECT_DIR$/schema.sql/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,14 +276,7 @@
       <workItem from="1664297372039" duration="168000" />
       <workItem from="1664297555626" duration="31258000" />
       <workItem from="1664555260237" duration="13830000" />
-      <workItem from="1664573382359" duration="54065000" />
-    </task>
-    <task id="LOCAL-00026" summary="308">
-      <created>1662218682130</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1662218682130</updated>
+      <workItem from="1664573382359" duration="54388000" />
     </task>
     <task id="LOCAL-00027" summary="309">
       <created>1662219073041</created>
@@ -618,7 +614,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664912403345</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="fix4">
+      <created>1664912745432</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1664912745433</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
